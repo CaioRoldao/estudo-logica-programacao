@@ -56,9 +56,10 @@ var resultado1=soma(n,m);
 var resultado2=multiplica(n,m);
 console.log("Resultado1 é: "+resultado1);
 console.log("Resultado2 é: "+resultado2);
+  */
 
 // codigo escrito todo em uma unica linha, parametro nao segue o nome da variavel.
-
+/*
 function somar (valor1, valor2){
     return valor1 + valor2
 } 
@@ -77,9 +78,9 @@ const resuladoMultiplicacao = multiplicar(valor3, valor4)
 console.log("esse é o resultado",resultadoSoma);
 console.log("esse é o resltado", resuladoMultiplicacao);
 
+*/
 
-
-
+/*
 function a(b, c, d, e, f) {
     if (b == true) {
       console.log("ok");
@@ -108,17 +109,59 @@ function a(b, c, d, e, f) {
   
   a(true,5,"admin",false,true)
   y(x)
-
-
-function impremirdadosCadastrais(dadosCadastrais){
-    return dadosCadastrais;
+*/
+/*
+function impremirdadosCadastrais(dadosCadastrais) {
+  return dadosCadastrais;
 }
 let dadosCadastrais = {
-    nome:"joao",
-    idade:30,
-    email:"email@email.com",
-    telefone:"(11)9.9999-9999"
+  nome: "joao",
+  idade: 30,
+  email: "email@email.com",
+  telefone: "(11)9.9999-9999",
 };
 console.log(impremirdadosCadastrais(dadosCadastrais));
+*/
 //console.log("------------------------");
 //console.log('fim');
+
+function permissaoFuncionario(usuario, nivel, perfil) {
+  switch (true) {
+    case usuario:
+      console.log("é um usuario ativo", usuario);
+      break;
+    case nivel > 10:
+      console.log("se o nivel for acima de 10", nivel);
+      break;
+    case perfil === "admin":
+      console.log("é um admin");
+      break;
+    default:
+      console.log("acesso não permitido");
+  }
+
+  
+}
+
+const dadosFuncionario = {
+  nome: "joao",
+  idade: 30,
+  email: "email@email.com",
+  telefone: "9999-9999",
+};
+
+function fichaCadastral({ nome, idade, email, telefone }) {
+  console.log("nome", nome);
+  console.log("idade", idade);
+  console.log("email", email);
+  console.log("telefone", telefone);
+}
+
+const isUsuario = true;
+const nivel = 12;
+const perfil = "admin";
+
+permissaoFuncionario(isUsuario, nivel, perfil);
+fichaCadastral(dadosFuncionario);
+
+// parametros b,c,d com nome incorretos, parametros sem uso,
